@@ -80,6 +80,57 @@ section {
   color: #444;
 }
 
+/* Founder Highlight Card */
+.founder-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.founder-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #25D366;
+}
+
+.founder-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.founder-info .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.founder-info .bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Founder Card */
+@media (max-width: 768px) {
+  .founder-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .founder-photo {
+    margin-bottom: 15px;
+  }
+  
+}
 /* ========== PORTFOLIO ========== */
 .portfolio {
   background: #fff;
