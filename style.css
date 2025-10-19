@@ -1,309 +1,290 @@
-/* ========== GLOBAL STYLES ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ---------- GENERAL STYLES ---------- */
 body {
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: #f9f9f9;
+  background: #f8f8f8;
   color: #222;
-  line-height: 1.7;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #111;
-  text-align: center;
+  margin-bottom: 15px;
 }
 
-/* ========== HERO SECTION ========== */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* ---------- HERO SECTION ---------- */
 .hero {
   position: relative;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
   height: 100vh;
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
 .hero .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero .content {
   position: relative;
   z-index: 2;
+  max-width: 600px;
 }
 
 .logo {
-  width: 130px;
-  margin-bottom: 25px;
-  animation: fadeDown 1.5s ease;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  margin-top: 10px;
-  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .location {
-  margin-top: 10px;
-  font-style: italic;
-  font-size: 1rem;
+  font-size: 0.9rem;
   opacity: 0.9;
 }
 
-/* ========== ABOUT SECTION ========== */
-section {
-  padding: 80px 10%;
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  background: #fff;
 }
 
-.about p {
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* Founder Highlight Card */
 .founder-card {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
   gap: 30px;
   margin-top: 40px;
-  background: #f9f9f9;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
 }
 
 .founder-photo {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
+  width: 300px;
+  height: 380px;
   object-fit: cover;
-  border: 3px solid #25D366;
+  border-radius: 10px;
   flex-shrink: 0;
 }
 
 .founder-info {
   flex: 1;
-  min-width: 250px;
 }
 
 .founder-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-bottom: 4px;
-  color: #222;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
 }
 
-.founder-info .title {
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
-  margin-bottom: 10px;
+.title {
+  color: #777;
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
-.founder-info .bio {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #333;
+/* ---------- SERVICES SECTION ---------- */
+.services {
+  background: #f8f8f8;
+  text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .founder-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .founder-photo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 15px;
-  }
-
-  .founder-info h3 {
-    font-size: 20px;
-  }
-
-  .founder-info .bio {
-    font-size: 14px;
-  }
-}
-  
-}
-/* ========== PORTFOLIO ========== */
-.portfolio {
-  background: #fff;
+.service-list {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
 }
 
+.service-list li {
+  padding: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* ---------- PORTFOLIO ---------- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: cover;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
+.gallery-item img:hover {
   transform: scale(1.05);
-  opacity: 0.9;
 }
 
-/* ========== CONTACT ========== */
-.contact {
-  background: #f1f1f1;
+/* ---------- VISION & TEAM ---------- */
+.vision {
+  background: #fff;
   text-align: center;
 }
 
-.contact p {
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-member {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  background: #f8f8f8;
+  text-align: center;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #1a73e8;
+  padding-left: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  background: #fff;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
-  margin-top: 10px;
 }
 
-.contact a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
+.contact-form button {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.contact a:hover {
-  text-decoration: underline;
+.contact-form button:hover {
+  background: #145ab6;
 }
 
+/* ---------- MAP ---------- */
+.map-container iframe {
+  border-radius: 10px;
+}
+
+/* ---------- WHATSAPP BUTTON ---------- */
 .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .whatsapp-btn img {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+  width: 24px;
 }
 
 .whatsapp-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transform: scale(1.05);
 }
 
-#location {
-  text-align: center;
-  background: #f7f7f7;
-  padding: 60px 20px;
-}
-
-#location h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-#location p {
-  margin-bottom: 25px;
-  color: #666;
-  font-size: 1rem;
-}
-
-/* Map container fix */
-.map-container {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-/* ========== FOOTER ========== */
+/* ---------- FOOTER ---------- */
 footer {
-  background-color: #111;
+  background: #111;
   color: #eee;
   text-align: center;
   padding: 30px 10px;
+}
+
+footer p, footer a {
+  color: #ccc;
   font-size: 0.95rem;
-  line-height: 1.6;
 }
 
-footer a {
-  color: #d4af37;
-  text-decoration: none;
-  transition: color 0.3s ease;
+footer .endorsement {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1a73e8;
 }
 
-footer a:hover {
-  color: #fff;
-}
-
-.endorsement {
-  margin-top: 15px;
-  font-style: italic;
-  color: #bbb;
-  font-size: 0.9rem;
-}
-
-.endorsement strong {
-  color: #ffd700; /* elegant gold accent */
-}
-
-/* ========== FADE ANIMATION ========== */
+/* ---------- FADE-IN ANIMATION ---------- */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade-in.visible {
@@ -311,27 +292,24 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/* ========== LOGO FADE ANIM ========== */
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ========== RESPONSIVE ========== */
+/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
+  .founder-card {
+    flex-direction: column;
+    align-items: center;
   }
 
-  section {
-    padding: 60px 5%;
+  .founder-photo {
+    width: 100%;
+    height: auto;
   }
 
-  .about p {
-    font-size: 1rem;
+  .team {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
+  .gallery-item img {
+    height: 200px;
   }
 }
