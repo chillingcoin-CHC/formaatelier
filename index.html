@@ -21,65 +21,94 @@
   </header>
 
   <!-- ABOUT SECTION -->
-  <section class="about fade-in">
+<section class="about fade-in">
+  <div class="container">
     <h2>About Us</h2>
     <p>
-      Forma Atelier is an Athens-based architectural and interior design studio rooted in the philosophy of refined simplicity. 
-      We combine aesthetic elegance with structural precision, creating timeless spaces that celebrate form, light, and materiality.
+      Forma Atelier is a private architectural and interior design studio based in Athens, Greece. 
+      Since its founding in <strong>2005</strong>, we have delivered elegant, functional, and timeless spaces that celebrate form, light, and materiality.
     </p>
-  </section>
+
+    <!-- Founder Highlight Card -->
+    <div class="founder-card">
+      <img src="images/founder.jpg" alt="Derick Richy" class="founder-photo">
+      <div class="founder-info">
+        <h3>Derick Richy</h3>
+        <p class="title">Founder & Lead Designer</p>
+        <p class="bio">
+          Highly skilled designer and visionary, Derick has led Forma Atelier since 2005, shaping spaces with a focus on elegance, precision, and creativity. 
+          His philosophy centers on refined simplicity, delivering projects that are both beautiful and functional.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- PORTFOLIO SECTION -->
   <section class="portfolio fade-in">
-    <h2>Selected Works</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="images/interior1.jpg" alt="Interior Design Project"></div>
-      <div class="gallery-item"><img src="images/architecture1.jpg" alt="Architectural Project"></div>
-      <div class="gallery-item"><img src="images/space1.jpg" alt="Residential Project"></div>
+    <div class="container">
+      <h2>Selected Works</h2>
+      <div class="gallery">
+        <div class="gallery-item"><img src="images/interior1.jpg" alt="Interior Design Project"></div>
+        <div class="gallery-item"><img src="images/architecture1.jpg" alt="Architectural Project"></div>
+        <div class="gallery-item"><img src="images/space1.jpg" alt="Residential Project"></div>
+        <div class="gallery-item"><img src="images/hero-bg.jpg" alt="Featured Project"></div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
   <section class="contact fade-in">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:derickrichy64@gmail.com">derickrichy64@gmail.com</a></p>
-   <!-- WhatsApp Floating Button -->
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:derickrichy64@gmail.com">derickrichy64@gmail.com</a></p>
+      <p>Phone: <a href="tel:+306947460401">+30 694 746 0401</a></p>
+      <p>Founder: <strong>Derick Richy</strong></p>
+      <p>Founded: <strong>2005</strong></p>
+      <p>Location: Kifisia, Athens, Greece</p>
+      <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
+    </div>
+  </section>
+
+  <!-- LOCATION SECTION -->
+  <section id="location" class="fade-in">
+    <div class="container">
+      <h2>Visit Us</h2>
+      <p>Forma Atelier — Kifisia, Athens, Greece</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.926532622042!2d23.815640875607773!3d38.073605499171936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd406ac6b6a7%3A0x6a0a5a23ef012a2b!2sKifisia%2C%20Athens%2C%20Greece!5e0!3m2!1sen!2sgr!4v1698234500000!5m2!1sen!2sgr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
   <a href="https://wa.me/306947460401" class="whatsapp-btn" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     Chat with us
   </a>
-    <p>Location: Kifisia, Athens, Greece</p>
-    <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
-  </section>
 
-  <!-- LOCATION SECTION -->
- <section id="location">
-  <h2>Visit Us</h2>
-  <p>Forma Atelier — Kifisia, Athens, Greece</p>
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.926532622042!2d23.815640875607773!3d38.073605499171936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd406ac6b6a7%3A0x6a0a5a23ef012a2b!2sKifisia%2C%20Athens%2C%20Greece!5e0!3m2!1sen!2sgr!4v1698234500000!5m2!1sen!2sgr"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-   </div>
- </section>
-  
   <!-- FOOTER -->
-<footer>
-  <p><strong>Forma Atelier © 2025</strong> — Architecture & Interior Design Studio, Athens</p>
-  <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
-  <div class="endorsement">
-    <p>Proudly represented as a <strong>ChillingCoin ($CHC) Brand Ambassador</strong></p>
-  </div>
-</footer>
+  <footer>
+    <div class="container">
+      <p><strong>Forma Atelier © <span id="currentYear"></span></strong> — Founded by <strong>Derick Richy</strong>, 2005 — Architecture & Interior Design Studio, Athens</p>
+      <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
+      <div class="endorsement">
+        <p>Proudly represented as a <strong>ChillingCoin ($CHC) Brand Ambassador</strong></p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Fade-in Script -->
+  <!-- FADE-IN SCRIPT -->
   <script>
+    // Automatically update year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Fade-in on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = { threshold: 0.3 };
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
