@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forma Atelier — Architecture & Interior Design Studio in Kifisia, Athens, Greece" />
   <title>Forma Atelier | Architecture & Interior Design</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,36 +22,57 @@
   </header>
 
   <!-- ABOUT SECTION -->
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      Forma Atelier is an Athens-based architectural and interior design studio rooted in the philosophy of refined simplicity. 
-      We combine aesthetic elegance with structural precision, creating timeless spaces that celebrate form, light, and materiality.
-    </p>
+  <section class="about fade-in">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Forma Atelier is a creative architecture and interior design studio based in Kifisia, Athens. 
+        We specialize in modern residential and commercial spaces that blend aesthetic sophistication with functional elegance.
+      </p>
+    </div>
   </section>
 
-  <!-- PORTFOLIO SECTION -->
-  <section class="portfolio">
-    <h2>Selected Works</h2>
-    <div class="gallery">
-      <img src="images/interior1.jpg" alt="Interior Design Project">
-      <img src="images/architecture1.jpg" alt="Architectural Project">
-      <img src="images/space1.jpg" alt="Residential Project">
+  <!-- PROJECTS SECTION -->
+  <section class="projects fade-in">
+    <div class="container">
+      <h2>Our Work</h2>
+      <div class="project-grid">
+        <div class="project"><img src="images/project1.jpg" alt="Modern Villa"></div>
+        <div class="project"><img src="images/project2.jpg" alt="Interior Living Room"></div>
+        <div class="project"><img src="images/project3.jpg" alt="Office Design"></div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:derickrichy64@gmail.com">derickrichy64@gmail.com</a></p>
-    <p>Location: Kifisia, Athens, Greece</p>
-    <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
+  <section class="contact fade-in">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Interested in working together? Let’s talk about your next project.</p>
+      <p class="email"><a href="mailto:derickrichy64@gmail.com">derickrichy64@gmail.com</a></p>
+      <p class="map">📍 Kifisia, Athens, Greece</p>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p><strong>Forma Atelier © 2025</strong> — Architecture & Interior Design Studio, Athens</p>
+    <p><strong>Forma Atelier</strong> — Architecture & Interior Design Studio, Athens 🇬🇷</p>
+    <p><a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View our ArchDaily profile</a></p>
   </footer>
+
+  <script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.3 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 
 </body>
 </html>
