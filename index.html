@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forma Atelier — Architecture & Interior Design studio based in Kifisia, Athens, Greece." />
+  <title>FORMA ATELIER | Architecture & Interior Design</title>
+
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #222;
+      background-color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      letter-spacing: 4px;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      color: #777;
+      margin-bottom: 1.5rem;
+    }
+
+    header a {
+      text-decoration: none;
+      background-color: #111;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 2px;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+
+    header a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #444;
+      font-size: 1.05rem;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .project {
+      background-color: #f7f7f7;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project h4 {
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .contact p {
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    .contact a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    iframe {
+      margin-top: 30px;
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.5rem; }
+      section { padding: 60px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <h1>FORMA ATELIER</h1>
+    <h2>ARCHITECTURE & INTERIOR DESIGN</h2>
+    <p>Kifisia, Athens, Greece</p>
+    <a href="#about">Explore Our Work</a>
+  </header>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h3>About Us</h3>
+    <p>
+      Forma Atelier is a contemporary architectural and interior design studio based in <strong>Kifisia, Athens</strong>. 
+      We specialize in creating timeless, functional, and emotionally engaging spaces that blend modern aesthetics with authentic Greek architectural sensibilities. 
+      From private residences and commercial interiors to full-scale architectural concepts, our work is guided by simplicity, proportion, and the pursuit of refined detail. 
+      Every project reflects a balance between form, material, and light — tailored to express each client’s unique vision.
+      <br><br>
+      At Forma Atelier, design is more than construction — it’s an artful dialogue between space and emotion, crafted to inspire everyday living.
+    </p>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h3>Selected Projects</h3>
+    <div class="portfolio">
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400?text=Residential+Concept" alt="Residential Concept">
+        <h4>Residential Concept</h4>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400?text=Modern+Interior" alt="Modern Interior">
+        <h4>Modern Interior</h4>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400?text=Commercial+Space" alt="Commercial Space">
+        <h4>Commercial Space</h4>
+      </div>
+    </div>
+    <br><br>
+    <a href="https://my.archdaily.com/us/@derick-richy" target="_blank">View Full Portfolio →</a>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:derickrichy64@gmail.com">derickrichy64@gmail.com</a></p>
+    <iframe 
+      src="https://www.google.com/maps?q=Kifisia,+Athens,+Greece&output=embed" 
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    © Forma Atelier | Athens, Greece
+  </footer>
+
+</body>
+</html>
